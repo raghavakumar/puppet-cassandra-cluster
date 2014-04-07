@@ -13,7 +13,7 @@ Configuration:
 
 A tar.gz file needs to be placed into ~/modules/cassandra/files. Already placed "apache-cassandra-2.0.4-bin.tar" in files folder.
 
-If files/apache-cassandra-2.0.4-bin.tar was replaced with any ohter downloaded version, then params.pp file needs to be updated with the version downloaded.
+If files/apache-cassandra-2.0.4-bin.tar was replaced with any other version, then params.pp file needs to be updated with the version downloaded.
 
 The hostnames of the nodes in the cluster need to be defined in params.pp, by default this module creates a 2 node cluster.
 
