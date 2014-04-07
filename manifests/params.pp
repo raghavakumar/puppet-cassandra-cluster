@@ -50,12 +50,15 @@ class cassandra::params {
 
   #set tokens for cassandra nodes
   $initial_token = $::hostname ? {
-     default => "42535295865117307932921825928971026432",
+    cassandra-01 => "0",
+    cassandra-02 => "42535295865117307932921825928971026432",
+    cassandra-03 => "85070591730234615865843651857942052864",
+    cassandra-04 => "127605887595351923798765477786913079296",
   }
 
-  #set cassandra seeds
+  #set cassandra nodes as seeds.        
   $seeds = $::hostname ? {
-     default => "mastercentos.example.com",
+    default => "cassandra-01, cassandra-03",
   }
 
   #set cassandra log path
