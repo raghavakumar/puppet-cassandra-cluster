@@ -13,13 +13,12 @@ Configuration:
 
 Modifiy "$download_url" param in "params.pp" to fetch required cassandra version using wget. By default, "$download_url" param defined "https://archive.apache.org/dist/cassandra/2.0.4/apache-cassandra-2.0.4-bin.tar.gz".
 
-The hostnames of the nodes in the cluster need to be defined in params.pp, by default this module creates a 2 node cluster.
+The params.pp also requires $JAVA_HOME PATH. $java_home variable needs to be properly updated.
 
-If you change the number of nodes from 2 to the required number of nodes (for ex: 4) you need to run the following python script and update $token section in params.pp.
+The params.pp also requires "$initial_token" and "$seeds" variables needs to be properly updated. $initial_token denotes the cluster nodes with a valid token. $seeds variable denotes set of cluster nodes which are treated as cassandra seeds.
 
-    num_node = 4
-    for n in range(num_node):
-        print int(2**127 / num_node * n)
+The hostnames of the nodes in the cluster need to be defined in params.pp, by default this module creates a 4 node cluster.
+
 
 Support:
 
