@@ -54,7 +54,7 @@ class cassandra {
 
 
   file {"${cassandra::params::data_path}":
-		ensure => "directory",
+    ensure => "directory",
     purge  => true,
     force  => true,
     backup => false,
