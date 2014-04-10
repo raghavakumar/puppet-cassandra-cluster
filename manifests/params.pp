@@ -66,21 +66,6 @@ class cassandra::params {
      default => "/var/log/cassandra",
   }
 
-  #set cassandra jmx_port
-  $jmx_port = $::hostname ? {
-     default => "7199",
-  }
-
-  #set max_heap size
-  $max_heap = $::hostname ? {
-     default => "4G",
-  }
-
-  #set heap_newsize
-  $heap_newsize = $::hostname ? {
-     default => "800M",
-  }
-
   #set cassandra_owner/user
   $cassandra_owner = $::hostname ? {
      default => "cassandra",

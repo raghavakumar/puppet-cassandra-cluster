@@ -14,6 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# The java implementation to use.  Required.
+export JAVA_HOME=<%= scope.lookupvar('cassandra::params::java_home') %>
+
 calculate_heap_sizes()
 {
     case "`uname`" in
